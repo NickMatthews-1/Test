@@ -1,0 +1,3 @@
+grep -v '^#' ../lib-7.md5 | awk '{print $2}' | wget -i- -c \
+    -B https://www.x.org/pub/individual/lib/ &&
+md5sum -c ../lib-7.md5
