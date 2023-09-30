@@ -1,0 +1,12 @@
+meson setup                   \
+      --prefix=$XORG_PREFIX   \
+      --buildtype=release     \
+      -Dplatforms=x11,wayland \
+      -Dintel=true            \
+      -Dgallium-drivers=auto  \
+      -Dvulkan-drivers=""     \
+      -Dvalgrind=disabled     \
+      -Dlibunwind=disabled    \
+      ..                      &&
+
+ninja
