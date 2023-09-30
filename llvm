@@ -1,0 +1,6 @@
+tar -xf ../llvm-cmake.src.tar.xz                                   &&
+tar -xf ../llvm-third-party.src.tar.xz                             &&
+sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@llvm-cmake.src@'          \
+    -i CMakeLists.txt                                              &&
+sed '/LLVM_THIRD_PARTY_DIR/s@../third-party@llvm-third-party.src@' \
+    -i cmake/modules/HandleLLVMOptions.cmake
