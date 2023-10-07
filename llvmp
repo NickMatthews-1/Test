@@ -1,0 +1,1 @@
+grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
