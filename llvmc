@@ -1,0 +1,2 @@
+sed 's/clang_dfsan/& -fno-stack-protector/' \
+    -i projects/compiler-rt/test/dfsan/origin_unaligned_memtrans.c
