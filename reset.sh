@@ -15,4 +15,5 @@ sudo systemd-machine-id-setup
 
 sed -i 's/debian/$host_name/g' /etc/hosts
 
+# This sets the networking to static
 sed -i 's/dhcp/static/g' /etc/network/interfaces
