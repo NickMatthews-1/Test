@@ -1,4 +1,4 @@
-read -p 'hostname:' $host_name
+read -p 'hostname:' host_name
 
 hostnamectl set-hostname $host_name
 sudo rm -f /etc/machine-id
