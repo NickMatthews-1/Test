@@ -1,3 +1,6 @@
+echo ' address'$ip >> /etc/network/interfaces
+read -p 'ip:' ip
+
 # This grabs the hostname
 read -p 'hostname:' host_name
 
