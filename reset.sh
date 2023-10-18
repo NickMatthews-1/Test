@@ -1,9 +1,12 @@
-read -p 'ip:' ip
 echo -e "\e[0;31m Please put /24 at the end \e[0m"
-echo ' address   '$ip >> /etc/network/interfaces
+# fetch ip
+read -p 'ip: ' ip
+
+#fetch gateway
+read -p 'gateway: ' gateway
 
 # This grabs the hostname
-read -p 'hostname:' host_name
+read -p 'hostname: ' host_name
 
 # This sets the hostname varirable
 hostnamectl set-hostname $host_name
@@ -21,3 +24,8 @@ sed -i 's/debian/$host_name/g' /etc/hosts
 
 # This sets the networking to static
 sed -i 's/dhcp/static/g' /etc/network/interfaces
+
+#set ip and gateway 
+echo '    address '$ip >> /etc/network/interfaces
+echo '    gateway '$gateway >> /etc/network/interfaces
+systemctl restart networking
