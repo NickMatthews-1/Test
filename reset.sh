@@ -1,6 +1,6 @@
 read -p 'ip:' ip
 echo -e "\e[0;31m Please put /24 at the end \e[0m"
-echo ' address '$ip >> /etc/network/interfaces
+echo ' address   '$ip >> /etc/network/interfaces
 
 # This grabs the hostname
 read -p 'hostname:' host_name
