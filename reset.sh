@@ -14,3 +14,5 @@ sudo rm -f /var/lib/dbus/machine-id
 sudo systemd-machine-id-setup
 
 sed -i 's/debian/$host_name/g' /etc/hosts
+
+sed -i 's/dhcp/static/g' /etc/network/interfaces
