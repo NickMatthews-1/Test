@@ -28,4 +28,6 @@ sed -i 's/dhcp/static/g' /etc/network/interfaces
 #set ip and gateway 
 echo '    address '$ip >> /etc/network/interfaces
 echo '    gateway '$gateway >> /etc/network/interfaces
-systemctl restart networking
+
+# This restarts networking
+sudo systemctl restart networking
