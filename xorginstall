@@ -1,17 +1,11 @@
-for package in $(grep -v '^#' ../app-7.md5 | awk '{print $2}')
+for package in $(grep -v '^#' ../font-7.md5 | awk '{print $2}')
 do
   packagedir=${package%.tar.?z*}
   tar -xf $package
   pushd $packagedir
-     case $packagedir in
-       luit-[0-9]* )
-         sed -i -e "/D_XOPEN/s/5/6/" configure
-       ;;
-     esac
-
-     ./configure $XORG_CONFIG
-     make
-     as_root make install
+    ./configure $XORG_CONFIG
+    make
   popd
-  rm -rf $packagedir
+  as_root rm -rf $packagedir
 done
+
