@@ -59,4 +59,3 @@ llvm-config = "/usr/bin/llvm-config"
 # NB the output of llvm-config (i.e. help options) may be
 # dumped to the screen when config.toml is parsed.
 llvm-config = "/usr/bin/llvm-config"
-EOF
